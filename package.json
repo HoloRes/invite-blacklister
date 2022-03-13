@@ -33,14 +33,14 @@
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
-    "@tsconfig/node16": "^1.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^8.2.0",
+    "@tsconfig/node16": "1.0.2",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
+    "eslint": "8.11.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-config-airbnb-typescript": "^16.1.2",
-    "eslint-plugin-import": "^2.25.2",
-    "ts-node-dev": "^1.1.8",
-    "typescript": "^4.6.2"
+    "eslint-config-airbnb-typescript": "16.1.2",
+    "eslint-plugin-import": "2.25.4",
+    "ts-node-dev": "1.1.8",
+    "typescript": "4.6.2"
   }
 }

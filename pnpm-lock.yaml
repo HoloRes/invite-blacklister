@@ -5,19 +5,19 @@ specifiers:
   '@sentry/integrations': ^6.18.2
   '@sentry/node': ^6.18.2
   '@sentry/tracing': ^6.18.2
-  '@tsconfig/node16': ^1.0.2
-  '@typescript-eslint/eslint-plugin': ^5.0.0
-  '@typescript-eslint/parser': ^5.0.0
+  '@tsconfig/node16': 1.0.2
+  '@typescript-eslint/eslint-plugin': 5.14.0
+  '@typescript-eslint/parser': 5.14.0
   bufferutil: ^4.0.6
   discord.js: ^13.6.0
   erlpack: github:discord/erlpack
-  eslint: ^8.2.0
+  eslint: 8.11.0
   eslint-config-airbnb-base: 15.0.0
-  eslint-config-airbnb-typescript: ^16.1.2
-  eslint-plugin-import: ^2.25.2
+  eslint-config-airbnb-typescript: 16.1.2
+  eslint-plugin-import: 2.25.4
   mongoose: ^6.2.6
-  ts-node-dev: ^1.1.8
-  typescript: ^4.6.2
+  ts-node-dev: 1.1.8
+  typescript: 4.6.2
   utf-8-validate: ^5.0.9
   winston: ^3.6.0
   winston-loki: ^6.0.5

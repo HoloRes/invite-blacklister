@@ -25,7 +25,6 @@ ENV NODE_ENV=production
 WORKDIR /app
 COPY package.json .
 COPY pnpm-lock.yaml .
-COPY strings.json .
 RUN pnpm install \
     && cp -r /tmp/dist/ .
 RUN rm -rf /tmp

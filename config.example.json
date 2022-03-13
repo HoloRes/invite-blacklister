@@ -1,0 +1,21 @@
+{
+    "discord": {
+        "authToken": ""
+    },
+    "mongodb": {
+        "host": "",
+        "username": "",
+        "password": "",
+        "database": ""
+    },
+    "logTransports": {
+        "console": {
+            "level": "info"
+        },
+        "loki": {
+            "host": "",
+            "level": "info"
+        }
+    },
+    "sentryDsn": ""
+}

@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/HoloRes/invite-blacklister#readme",
   "dependencies": {
+    "@sapphire/decorators": "^4.3.1",
+    "@sapphire/discord.js-utilities": "^4.9.1",
     "@sapphire/framework": "^3.0.0-next.5524516.0",
+    "@sapphire/utilities": "^3.5.0",
     "@sentry/integrations": "^6.18.2",
     "@sentry/node": "^6.18.2",
     "@sentry/tracing": "^6.18.2",
@@ -33,7 +36,7 @@
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
-    "@tsconfig/node16": "1.0.2",
+    "@sapphire/ts-config": "^3.3.2",
     "@typescript-eslint/eslint-plugin": "5.14.0",
     "@typescript-eslint/parser": "5.14.0",
     "eslint": "8.11.0",

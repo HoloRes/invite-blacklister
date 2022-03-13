@@ -9,5 +9,5 @@
     "include": [
         "./src/**/*"
     ],
-	"extends": "@tsconfig/node16/tsconfig.json"
+	"extends": "@sapphire/ts-config/extra-strict"
 }

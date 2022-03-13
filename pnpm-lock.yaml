@@ -1,11 +1,14 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@sapphire/decorators': ^4.3.1
+  '@sapphire/discord.js-utilities': ^4.9.1
   '@sapphire/framework': ^3.0.0-next.5524516.0
+  '@sapphire/ts-config': ^3.3.2
+  '@sapphire/utilities': ^3.5.0
   '@sentry/integrations': ^6.18.2
   '@sentry/node': ^6.18.2
   '@sentry/tracing': ^6.18.2
-  '@tsconfig/node16': 1.0.2
   '@typescript-eslint/eslint-plugin': 5.14.0
   '@typescript-eslint/parser': 5.14.0
   bufferutil: ^4.0.6
@@ -24,7 +27,10 @@ specifiers:
   zlib-sync: ^0.1.7
 
 dependencies:
+  '@sapphire/decorators': 4.3.1
+  '@sapphire/discord.js-utilities': 4.9.1
   '@sapphire/framework': 3.0.0-next.5524516.0
+  '@sapphire/utilities': 3.5.0
   '@sentry/integrations': 6.18.2
   '@sentry/node': 6.18.2
   '@sentry/tracing': 6.18.2
@@ -38,7 +44,7 @@ dependencies:
   zlib-sync: 0.1.7
 
 devDependencies:
-  '@tsconfig/node16': 1.0.2
+  '@sapphire/ts-config': 3.3.2
   '@typescript-eslint/eslint-plugin': 5.14.0_ace6f9e7722b813e21eaf2dc993bc413
   '@typescript-eslint/parser': 5.14.0_eslint@8.11.0+typescript@4.6.2
   eslint: 8.11.0
@@ -302,6 +308,13 @@ packages:
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dev: false
 
+  /@sapphire/decorators/4.3.1:
+    resolution: {integrity: sha512-Zj3iTt4lru1TA9f0HjJ6WWrs200QNIF4gTUbS3IV/1gaGJ7UHogKt0tAWC2uT74snxP//MRsbXKhEqJi7cHEUg==}
+    engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
+    dependencies:
+      tslib: 2.3.1
+    dev: false
+
   /@sapphire/discord-utilities/2.10.1:
     resolution: {integrity: sha512-ZkaWPah1of0fuLYjnDvrP9gTWrn6E1JhBRX0KbMDXJVpwRMsZp0AAznfTBa2YD5gzLEvpxzgS3zHeeOw+knjaw==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
@@ -368,6 +381,14 @@ packages:
     dependencies:
       '@sapphire/utilities': 3.5.0
     dev: false
+
+  /@sapphire/ts-config/3.3.2:
+    resolution: {integrity: sha512-NbM+Pdx+jY4MfdlRGOMzVFjZHZlmsBUvWEKEWMKjopvTndvxyP9gHJwYu73bDkGu9JxuahtnpOGs6Zle4BhmUg==}
+    engines: {node: '>=v16.0.0', npm: '>=8.0.0'}
+    dependencies:
+      tslib: 2.3.1
+      typescript: 4.6.2
+    dev: true
 
   /@sapphire/utilities/3.5.0:
     resolution: {integrity: sha512-TKB6szXNBlKY9HfkiOvT1p79iQEnXVhr49QwWXgoQpGU9ODXcE1oGOTTAYixmYZLJfRw64+4gGiiUoSE1KiPEw==}
@@ -457,10 +478,6 @@ packages:
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
     engines: {node: '>=10'}
     dev: false
-
-  /@tsconfig/node16/1.0.2:
-    resolution: {integrity: sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==}
-    dev: true
 
   /@types/json-schema/7.0.9:
     resolution: {integrity: sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==}
@@ -2327,7 +2344,6 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
-    dev: false
 
   /tsutils/3.21.0_typescript@4.6.2:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}

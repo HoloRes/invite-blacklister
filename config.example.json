@@ -17,5 +17,8 @@
             "level": "info"
         }
     },
+    "info": {
+        "donateUrl": ""
+    },
     "sentryDsn": ""
 }

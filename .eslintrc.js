@@ -26,5 +26,7 @@ module.exports = {
 		'no-underscore-dangle': 'off', // Disabled as mongoose uses _id
 		'@typescript-eslint/indent': ['error', 'tab'],
 		'import/no-cycle': 'off',
+		'import/prefer-default-export': 'off',
+		'class-methods-use-this': 'off',
 	},
 };

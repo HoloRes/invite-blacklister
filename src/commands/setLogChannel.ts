@@ -3,6 +3,8 @@ import { ApplicationCommandRegistry, Command } from '@sapphire/framework';
 import * as Sentry from '@sentry/node';
 import Guild from '../models/Guild';
 
+const config = require('../../config.json');
+
 export class SetLogChannelCommand extends Command {
 	public override registerApplicationCommands(registry: ApplicationCommandRegistry) {
 		registry.registerChatInputCommand({
@@ -16,6 +18,8 @@ export class SetLogChannelCommand extends Command {
 					required: true,
 				},
 			],
+		}, {
+			idHints: [config.discord.idHints.setlogchannel],
 		});
 	}
 
@@ -32,11 +36,17 @@ export class SetLogChannelCommand extends Command {
 		try {
 			guild = await Guild.findById(interaction.guildId).exec();
 		} catch (err) {
+			this.container.logger.error(err);
 			Sentry.captureException(err);
 			return interaction.editReply('Failed to fetch guild from database. Try again.');
 		}
 
-		if (!guild) return interaction.editReply('Failed to fetch guild from database. Try again.');
+		if (!guild) {
+			guild = new Guild({
+				_id: interaction.guildId,
+				settings: {},
+			});
+		}
 
 		guild.settings.logChannel = channel.id;
 

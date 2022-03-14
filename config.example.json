@@ -1,6 +1,12 @@
 {
     "discord": {
-        "authToken": ""
+        "authToken": "",
+        "idHints": {
+            "info": "",
+            "setlogchannel": "",
+            "blacklist": "",
+            "unblacklist": ""
+        }
     },
     "mongodb": {
         "host": "",
@@ -8,16 +14,8 @@
         "password": "",
         "database": ""
     },
-    "logTransports": {
-        "console": {
-            "level": "info"
-        },
-        "loki": {
-            "host": "",
-            "level": "info"
-        }
-    },
     "info": {
+        "donateService": "",
         "donateUrl": ""
     },
     "sentryDsn": ""

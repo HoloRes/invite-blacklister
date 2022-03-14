@@ -11,11 +11,13 @@ export class InfoCommand extends Command {
 			description: 'Bot information',
 			chatInputCommand: {
 				register: true,
+				idHints: [config.discord.idHints.info],
 			},
 		});
 	}
 
 	public override async chatInputRun(interaction: CommandInteraction) {
+		await this.container.client.application?.fetch();
 		const { owner } = this.container.client.application!;
 		let ownerUser: User | undefined | null;
 
@@ -29,7 +31,7 @@ export class InfoCommand extends Command {
 			.addField('Source code', '[GitHub](https://github.com/HoloRes/invite-blacklister)');
 
 		if (ownerUser) {
-			embed.setAuthor({ name: ownerUser.tag, iconURL: ownerUser.avatarURL() ?? undefined });
+			embed.setAuthor({ name: `Created by: ${ownerUser.tag}`, iconURL: ownerUser.avatarURL() ?? undefined });
 		}
 		if (config.info.donateService && config.info.donateUrl) {
 			embed.addField('Donate', `[${config.info.donateService}](${config.info.donateUrl})`);

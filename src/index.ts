@@ -23,10 +23,10 @@ if (config.sentryDsn) {
 }
 
 // Mongoose
-mongoose.createConnection(`mongodb+srv://${config.mongodb.username}:${config.mongodb.password}@${config.mongodb.host}/${config.mongodb.database}`);
+mongoose.connect(`mongodb+srv://${config.mongodb.username}:${config.mongodb.password}@${config.mongodb.host}/${config.mongodb.database}`);
 
 // Discord client
-const client = new SapphireClient({ intents: ['GUILDS', 'GUILD_MESSAGES'] });
+const client = new SapphireClient({ intents: ['GUILDS', 'GUILD_MESSAGES'], partials: ['MESSAGE'] });
 
 client.once('ready', (container) => {
 	container.logger.info(`Bot started, running: ${process.env.COMMIT_SHA ?? 'unknown'}`);

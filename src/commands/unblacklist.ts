@@ -4,6 +4,8 @@ import * as Sentry from '@sentry/node';
 import { SnowflakeRegex } from '@sapphire/discord.js-utilities';
 import Ban from '../models/Ban';
 
+const config = require('../../config.json');
+
 export class UnblacklistCommand extends Command {
 	public override registerApplicationCommands(registry: ApplicationCommandRegistry) {
 		registry.registerChatInputCommand({
@@ -17,6 +19,8 @@ export class UnblacklistCommand extends Command {
 					required: true,
 				},
 			],
+		}, {
+			idHints: [config.discord.idHints.unblacklist],
 		});
 	}
 
@@ -35,6 +39,7 @@ export class UnblacklistCommand extends Command {
 			try {
 				ban = await Ban.findById(resolvable).exec();
 			} catch (err) {
+				this.container.logger.error(err);
 				Sentry.captureException(err);
 				return interaction.editReply('Failed to fetch from the database.');
 			}
@@ -52,6 +57,7 @@ export class UnblacklistCommand extends Command {
 			try {
 				ban = await Ban.findById(invite.guild.id).exec();
 			} catch (err) {
+				this.container.logger.error(err);
 				Sentry.captureException(err);
 				return interaction.editReply('Failed to fetch from the database.');
 			}

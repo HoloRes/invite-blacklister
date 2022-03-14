@@ -1,6 +1,6 @@
 // Imports
 import '@sapphire/plugin-logger/register';
-import { SapphireClient } from '@sapphire/framework';
+import { LogLevel, SapphireClient } from '@sapphire/framework';
 import mongoose from 'mongoose';
 import * as Sentry from '@sentry/node';
 import { RewriteFrames } from '@sentry/integrations';
@@ -26,7 +26,13 @@ if (config.sentryDsn) {
 mongoose.connect(`mongodb+srv://${config.mongodb.username}:${config.mongodb.password}@${config.mongodb.host}/${config.mongodb.database}`);
 
 // Discord client
-const client = new SapphireClient({ intents: ['GUILDS', 'GUILD_MESSAGES'], partials: ['MESSAGE'] });
+const client = new SapphireClient({
+	intents: ['GUILDS', 'GUILD_MESSAGES'],
+	partials: ['MESSAGE'],
+	logger: {
+		level: LogLevel.Info,
+	},
+});
 
 client.once('ready', (container) => {
 	container.logger.info(`Bot started, running: ${process.env.COMMIT_SHA ?? 'unknown'}`);

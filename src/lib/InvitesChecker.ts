@@ -73,6 +73,7 @@ export default async function run(message: Message, container: Container) {
 								await channel.send({ embeds: [failEmbed] });
 							}
 						});
+					break;
 				}
 			}
 		}

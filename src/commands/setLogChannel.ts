@@ -25,8 +25,8 @@ export class SetLogChannelCommand extends Command {
 
 	// eslint-disable-next-line consistent-return
 	public override async chatInputRun(interaction: CommandInteraction) {
-		if (!interaction.guild || !interaction.guildId) return interaction.reply('No guild in the interaction.');
-		if (!interaction.memberPermissions!.has('MANAGE_MESSAGES')) return interaction.reply('You lack permissions to run this command.');
+		if (!interaction.guild || !interaction.guildId) return interaction.reply({ content: 'No guild in the interaction.', ephemeral: true });
+		if (!interaction.memberPermissions!.has('MANAGE_MESSAGES')) return interaction.reply({ content: 'You lack permissions to run this command.', ephemeral: true });
 		await interaction.deferReply({ ephemeral: true });
 
 		// Parse the interaction

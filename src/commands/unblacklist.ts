@@ -27,6 +27,7 @@ export class UnblacklistCommand extends Command {
 	// eslint-disable-next-line consistent-return
 	public override async chatInputRun(interaction: CommandInteraction) {
 		if (!interaction.guild || !interaction.guildId) return interaction.reply('No guild in the interaction.');
+		if (!interaction.memberPermissions!.has('MANAGE_MESSAGES')) return interaction.reply('You lack permissions to run this command.');
 		await interaction.deferReply();
 
 		// Parse the interaction

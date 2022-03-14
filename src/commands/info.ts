@@ -27,7 +27,8 @@ export class InfoCommand extends Command {
 
 		const embed = new MessageEmbed()
 			.setTitle('Invite blacklist bot')
-			.setDescription('A bot to blacklist server invites based on the id.')
+			.setDescription('A bot to blacklist server invites based on the id instead of the invite code.')
+			.addField('Info', 'Commands are locked behind the Manage Messages permission. This permission also grants a bypass of the blacklist.')
 			.addField('Source code', '[GitHub](https://github.com/HoloRes/invite-blacklister)');
 
 		if (ownerUser) {

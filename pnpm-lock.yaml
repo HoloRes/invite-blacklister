@@ -6,7 +6,7 @@ specifiers:
   '@sapphire/framework': ^3.0.0-next.5524516.0
   '@sapphire/pieces': ^3.3.0
   '@sapphire/plugin-logger': ^2.2.0
-  '@sapphire/ts-config': 3.3.2
+  '@sapphire/ts-config': 3.3.3
   '@sapphire/utilities': ^3.5.0
   '@sentry/integrations': ^6.18.2
   '@sentry/node': ^6.18.2
@@ -46,7 +46,7 @@ dependencies:
   zlib-sync: 0.1.7
 
 devDependencies:
-  '@sapphire/ts-config': 3.3.2
+  '@sapphire/ts-config': 3.3.3
   '@typescript-eslint/eslint-plugin': 5.15.0_8deb5df5f68df203b82d505eb95b6b75
   '@typescript-eslint/parser': 5.15.0_eslint@8.11.0+typescript@4.6.3
   eslint: 8.11.0
@@ -220,8 +220,8 @@ packages:
       '@sapphire/utilities': 3.5.0
     dev: false
 
-  /@sapphire/ts-config/3.3.2:
-    resolution: {integrity: sha512-NbM+Pdx+jY4MfdlRGOMzVFjZHZlmsBUvWEKEWMKjopvTndvxyP9gHJwYu73bDkGu9JxuahtnpOGs6Zle4BhmUg==}
+  /@sapphire/ts-config/3.3.3:
+    resolution: {integrity: sha512-pL0Il7dOMspwOfScGMsdW+Qv3gKYrrEoLUdxHHTiuSqt9J4Oz+B5ezT3+HSorP/t3g8vYdbsB0zlfFvnVcJmSw==}
     engines: {node: '>=v16.0.0', npm: '>=8.0.0'}
     dependencies:
       tslib: 2.3.1

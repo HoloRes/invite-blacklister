@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Sentry Release
-        uses: getsentry/action-release@v1.1.6
+        uses: getsentry/action-release@v1.7.0
         env:
           SENTRY_URL: ${{ secrets.SENTRY_URL }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}

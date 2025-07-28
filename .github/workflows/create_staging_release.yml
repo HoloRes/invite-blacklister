@@ -9,7 +9,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'ci skip:')" # If the commit contains "ci skip" this action won't run
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
 #      - name: Sentry Release
 #        uses: getsentry/action-release@v1.1.5
